@@ -1,8 +1,10 @@
-PROGRAMS = true
+PROGRAMS = true false
 
 all: $(PROGRAMS)
 
 true: true.o
+
+false: false.o
 
 %: %.o
 	ld -o $@ $^
@@ -13,8 +15,9 @@ true: true.o
 clean:
 	rm -f $(PROGRAMS) *.o
 
-check: true
+check: true false
 	./true
+	! ./false
 
 .PHONY: \
 	all \
