@@ -15,6 +15,10 @@ handling (try --version or --help with GNU Coreutils' /bin/true), file I/O
 
 Like [true](#true), but returns `1`.
 
+## [bagels](bagel.s)
+
+Savory toroids.
+
 ## [AArch64](aarch64)
 
 ARM AArch64 implementations.

@@ -1,6 +1,6 @@
 DESTDIR=
 INSTALL_PREFIX=/usr/local
-PROGRAMS = true false
+PROGRAMS = true false bagels
 
 all: $(PROGRAMS)
 
@@ -13,6 +13,9 @@ false: false.o
 
 %.o: %.s
 	as -o $@ $^
+
+bagels: bagel.s
+	gcc -static -nostartfiles -o $@ $^
 
 clean:
 	rm -f $(PROGRAMS) *.o
